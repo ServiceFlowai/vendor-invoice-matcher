@@ -1,8 +1,20 @@
-export default function App() {
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import InvoiceUpload from './pages/InvoiceUpload';
+import UserManagement from './pages/UserManagement';
+import './App.css';
+
+function App() {
   return (
-    <div style={{ fontFamily: 'system-ui', padding: '2rem', maxWidth: 800, margin: '0 auto' }}>
-      <h1>Vendor Invoice Matcher</h1>
-      <p>Project scaffold ready. Start building!</p>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/upload" element={<InvoiceUpload />} />
+        <Route path="/users" element={<UserManagement />} />
+      </Routes>
     </div>
   );
 }
+
+export default App;

@@ -1,2 +1,15 @@
-:root { color-scheme: light dark; }
-body { margin: 0; font-family: system-ui, sans-serif; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.app {
+  padding: 20px;
+}
+
+div {
+  margin-bottom: 20px;
+}
